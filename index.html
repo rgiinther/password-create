@@ -7,6 +7,16 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+    
+        <!--<div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>-->
+
   <body>
     <!--Header-->
     <div class="wrapper">
@@ -16,38 +26,26 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
+        </div>  
     <!--End Header-->      
     <!--Begin Text Box-->
         <div class="card-body">
-          <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+          <textarea readonly class= "box" id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
         </div>
     <!--End Text Box-->  
-    <!--Begin Button and slider-->  
+    <!--begin button-->
         <div class="card-footer">
-          <form id="passwordGeneratorForm">
-            <input type="range" min="8" max="128" name="slider" id="slider"><br />
-
-            <label for="includeUppercase">Include Uppercase</label>
-            <input type="checkbox" id="includeUppercase">
-      
-            <label for="includeNumbers">Include Numbers</label>
-            <input type="checkbox" id="includeNumbers">
-      
-            <label for="includeSymbols">Include Symbols</label>
-            <input type="checkbox" id="includeSymbols">
-            </form>
-            <button type="generate" class="btn" onclick="generate()" >Generate Password</button>
+            <button id="generate" class="btn" >Generate Password</button>
           <div id="length"></div>
         </div>
-    <!--End button slider-->  
-    <!---->  
-        <div class="previous_passwords">
-          <b>Previously Generated Passwords</b>
-          <br />
-          <div id="lastNums"></div>
-      </div>
-      </div>
-    </div>
+        <!--End button-->
     <script src="script.js"></script>
   </body>
+</html>
+
+
+
+
+
+
 </html>

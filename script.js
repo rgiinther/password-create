@@ -1,38 +1,39 @@
-//generate random password
-function generate(){
 
-  //set password length/complexity
-  let complexity = document.getElementById("slider").value;
+// Assignment code here
+var generateBtn = document.querySelector("#generate");
 
-  //possible password values
-  let values = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
 
-  let password = "";
+//variables for password
+    var upperletters = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,Z,Y,Z";
+    var lowerLetters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+    var numbers = "1,2,3,4,5,6,7,8,9,0";
+    var symbols = "!,@,#,$,%,^,&,*,(,),_,+";
 
-  //create for loop to choose password characters
-  for(var i = 0; i <= complexity; i++){
-      password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-  }
+    
+      /*var preferences = window.prompt("How many characters would you like? (8-128)");
+  var character = window.prompt("Would you like special characters: 'yes or no'? (!@#$%^&*()_+)");
+  var number = window.prompt("Would you like numbers: 'yes or no'? (0123456789)");
+    console.log(preferences, character, number);*/
 
-  //add password to textbox/display area
-  document.getElementById("password").value = password;
+function writePassword() {
 
-  //add password to previously generated passwords section
-  document.getElementById("lastNums").innerHTML += password + "<br />";
 
-}
 
-//set default length display of 64
-document.getElementById("length").innerHTML = "Length: 64";
+// Get references to the #generate element
 
-//function to set length based on slider position
-document.getElementById("slider").oninput = function(){
 
-  if(document.getElementById("slider").value > 0){
-      document.getElementById("length").innerHTML = "Length: " + document.getElementById("slider").value;
-  }
-  else{
-      document.getElementById("length").innerHTML = "Length: 1";
-  }
+// Write password to the #password input
 
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  document.getElementByClass("box");
+  passwordText.value = password;
+
+  box.appendChild(password);
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 }
