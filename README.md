@@ -1,7 +1,9 @@
 # password-create
 
 This site is a random password generator. 
-Redoing this homework 
+This is my second attempt. 
+
+When you press the generate button you will be prompted with questions about your password preferences. 
 
 Link to site: https://rgiinther.github.io/password-create/
 
