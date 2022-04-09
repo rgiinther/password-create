@@ -93,6 +93,51 @@ function chooseSymbol(){
   return symbolPrompt;
 }
 
+
+// combine all functions to make random password
+function generatePassword() {
+  chooseLength();
+  console.log(lengthPrompt);
+  chooseNumber();
+  console.log(numberPrompt);
+  chooseUppercase();
+  console.log(upperPrompt);
+  chooseSymbol();
+  console.log(symbolPrompt);
+
+  var characters = lowerLetters; // checking all functions for character types, numbers, case type and special characters
+  var password1 = "";
+  if (upperPrompt && numberPrompt & symbolPrompt) {
+    characters += upperLetters + numbers + symbols;
+
+  } else if (upperPrompt && numberPrompt) {
+    characters += upperLetters + numbers;
+  
+  } else if (numberPrompt && symbolPrompt) {
+    characters += numbers + symbols;
+  
+  } else if (upperPrompt && symbolPrompt) {
+    characters += upperLetters + symbols;
+  
+  } else if (upperPrompt) {
+    characters += upperLetters;
+  
+  } else if(numberPrompt) {
+    characters += numbers;
+  
+  } else if (symbolPrompt) {
+    characters += symbols;
+  
+  } else {
+    characters === lowerLetters;
+  }
+
+  for(var i = 0; i < lengthPrompt; i++){
+    password1 += characters.charAt(Math.floor(Math.random() * characters.length)); // random number to be generated
+  }
+  return password1;
+}
+
     
 
 // Write password to the #password input
